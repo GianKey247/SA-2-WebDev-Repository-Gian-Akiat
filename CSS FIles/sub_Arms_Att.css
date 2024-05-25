@@ -107,27 +107,23 @@ p{
   justify-content: center; /* Center horizontally */
   align-items: center;    /* Center vertically */
   flex: 1;
-  height: 100vh; 
 }
 
 .left-side video {
   max-width: 100%;
   max-height: 100%; /* Ensure the video scales properly */
-}
-.left-side img{
-margin-top: 40px;
+
 }
 
 .right-side {
   flex: 1;
+  display: flex;
+  align-items: center;
   padding-left: 20px;
 }
 
 .right-side p {
-  margin-top: 120px;
-  margin-left: 20px;
-  margin-right: 40px;
-  margin-bottom: 80px;
+margin: 20;
 }
 
 .optionSelected{
