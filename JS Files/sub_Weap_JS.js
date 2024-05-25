@@ -97,7 +97,7 @@ function updateSelection(buttonElement, buttonList) {
 }
 
 // Updates the content (image, video, and text) based on the selected index
-function updateContent(dataList, index, imgElement, videoElement, pElement) {
+function updateContent(dataList, index, videoElement, pElement) {
     // Checks if the index is within the bounds of the dataList array
     if (index >= 0 && index < dataList.length) {
         // Sets the video source to the corresponding data entry's video
@@ -111,9 +111,9 @@ function updateContent(dataList, index, imgElement, videoElement, pElement) {
 }
 
 // Manages the selection of a button and updates the displayed content accordingly
-function showDivs(dataList, index, buttonElement, buttonList, imgElement, videoElement, pElement) {
+function showDivs(dataList, index, buttonElement, buttonList, videoElement, pElement) {
     // Updates the button selection state
     updateSelection(buttonElement, buttonList);
     // Updates the content display based on the selected index
-    updateContent(dataList, index, imgElement, videoElement, pElement);
+    updateContent(dataList, index, videoElement, pElement);
 }
