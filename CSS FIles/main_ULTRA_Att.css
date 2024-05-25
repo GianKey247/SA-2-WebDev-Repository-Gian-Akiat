@@ -1,0 +1,67 @@
+@font-face { font-family: BebasNeue; src: url('Fonts/Bebas_Neue/BebasNeue-Regular.ttf');}
+
+body{
+    background-color: rgb(10, 10, 10);
+    align-content: center;
+}
+button{
+    background-color: rgb(10, 10, 10);
+    border-style: none;
+    
+}
+
+.navi{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    z-index: 1000;
+  }
+  
+  .naviBar{
+    float: left;
+    color: white;
+  }
+  
+  .naviButton{
+    display: block;
+    padding: 10px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    text-decoration: none; /* no underline */
+    font-size: 59px;
+    justify-content:space-evenly;
+    font-family: BebasNeue;
+    width: 100%;
+  }
+
+img{
+    border-style: solid;
+    border-color: rgb(10, 10, 10);
+}
+
+h1{
+  font-family: BebasNeue;
+  font-size: 50px;
+  color: red;
+  text-align: center;
+}
+
+p{
+  font-family: BebasNeue;
+  font-size: 36px;
+  color:white;
+  text-align: center;
+}
+
+.banner{
+  display: flex; 
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 350px;
+}
+

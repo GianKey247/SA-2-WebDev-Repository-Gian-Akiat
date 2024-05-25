@@ -1,0 +1,135 @@
+@font-face { font-family: BebasNeue; src: url('Fonts/Bebas_Neue/BebasNeue-Regular.ttf');}
+@font-face { font-family: CabinCon; src: url('Fonts/Cabin_Condensed/CabinCondensed-Regular.ttf');}
+
+body{
+  background-color: rgb(10, 10, 10);
+}
+
+button{
+    background-color: rgb(10, 10, 10);
+    border-style: none;
+    
+}
+
+.navi{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(10, 10, 10);
+  z-index: 1000;
+}
+
+.naviBar{
+  float: left;
+  color: white;
+}
+
+.naviButton{
+  display: block;
+  padding: 10px;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  text-decoration: none; /* no underline */
+  font-size: 59px;
+  justify-content:space-evenly;
+  font-family: BebasNeue;
+  width: 100%;
+}
+
+h1{
+  font-family: BebasNeue;
+  font-size: 50px;
+  color:white;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 150px;
+}
+
+h2{
+  font-family: BebasNeue;
+  font-size: 50px;
+  color:white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+p{
+  font-family: CabinCon;
+  font-size: 30px;
+  color:white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.itemChoice{
+  display: block;
+  padding: 10px;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  text-decoration: none; /* no underline */
+  font-size: 59px;
+  justify-content:space-evenly;
+  font-family: BebasNeue;
+  width: 100%;
+  
+}
+
+.itemList{ 
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(10, 10, 10);
+  display: table;
+  margin: 0 auto;
+}
+
+.itemBar{
+  float: left;
+  color: white;
+}
+
+#itemDescription {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-style: solid;
+  border-color: white;
+  border-top: px;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex: 1;
+  height: 100vh; 
+}
+
+.left-side video {
+  max-width: 100%;
+  max-height: 100%; /* Ensure the video scales properly */
+}
+.left-side img{
+margin-top: 40px;
+}
+
+.right-side {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.right-side p {
+  margin-top: 120px;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 80px;
+}
+
+.optionSelected{
+  color: red;
+}
