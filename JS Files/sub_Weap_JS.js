@@ -55,6 +55,7 @@ const RailcannonDescriptionList=[
 
 
 window.onload = function () {
+    /* Checks what Enemy is selected and displays its appropiate information from their respective dictionaries */
     const itemLists = document.getElementsByClassName("itemList");
     for (const itemList of itemLists) {
         const buttonList = itemList.getElementsByClassName("itemChoice");
@@ -63,6 +64,7 @@ window.onload = function () {
         const pElement = descriptionContainer.querySelector('.itemText');
         let descriptionList;
         const type = itemList.dataset.type;
+        // Selects the appropriate description list based on the type
         if (type === "revolver") {
             descriptionList = RevolverDescriptionList;
         } else if (type === "shotgun") {
@@ -72,9 +74,12 @@ window.onload = function () {
         } else if (type === "railcannon") {
             descriptionList = RailcannonDescriptionList;
         }
+        // Displays the first option from each seperate description list
         showDivs(descriptionList,0,buttonList[0],buttonList,videoElement, pElement)
+         // Adds click event listeners to all buttons in the button list
         for (let i = 0; i < buttonList.length; i++) {      
             buttonList[i].addEventListener('click', function () {
+                // Updates the displayed content based on the clicked button
                 showDivs(descriptionList, i, this, buttonList, videoElement, pElement);
             });
         }
@@ -83,22 +88,32 @@ window.onload = function () {
 };
 
 function updateSelection(buttonElement, buttonList) {
+    // Removes the "optionSelected" class from all buttons in the list
     for (const button of buttonList) {
         button.classList.remove("optionSelected");
     }
+    // Adds the "optionSelected" class to the specified button element
     buttonElement.classList.add("optionSelected");
 }
 
-function updateContent(dataList, index, videoElement, pElement) {
+// Updates the content (image, video, and text) based on the selected index
+function updateContent(dataList, index, imgElement, videoElement, pElement) {
+    // Checks if the index is within the bounds of the dataList array
     if (index >= 0 && index < dataList.length) {
+        // Sets the video source to the corresponding data entry's video
         videoElement.setAttribute("src", dataList[index].video);
+        // Sets the paragraph text to the corresponding data entry's text
         pElement.innerText = dataList[index].text;
     } else {
+        // Logs an error if the index is out of bounds
         console.error("Index out of bounds");
     }
 }
 
-function showDivs(dataList, index, buttonElement, buttonList, videoElement, pElement) {
+// Manages the selection of a button and updates the displayed content accordingly
+function showDivs(dataList, index, buttonElement, buttonList, imgElement, videoElement, pElement) {
+    // Updates the button selection state
     updateSelection(buttonElement, buttonList);
-    updateContent(dataList, index, videoElement, pElement);
+    // Updates the content display based on the selected index
+    updateContent(dataList, index, imgElement, videoElement, pElement);
 }
